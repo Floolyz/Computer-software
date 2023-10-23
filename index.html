@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <header><h1>COMPUTER SOFTWARE <br> 2/1</h1></header>
+        <div class="student-info">
+            <div class="circle-img">
+            <img class="img-student" src="img/kitchon.jpg" alt="">
+            <h2 class="Name-student" ></h2>
+            <div class="btncontrol">
+            <button class="btn-prev" onclick="Prev()">Prev</button>
+            <button class="btn-next" onclick="Next()">Next</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // arrey img
+        const img = ["img/kitchon.jpg","img/Tak.jpg","img/kukiat.jpg","img/Chanatip.jpg","img/Chalotorn.jpg","img/Natcha.jpg","img/tomohisa.jpg","img/thanawat.jpg","img/nopparat.jpg","img/kla.jpg",
+        "img/Bannaphat.jpg","img/petcha.jpg","img/patcharaporn.jpg","img/ice.jpg","img/Pumphat.jpg","img/ratthaphhum.jpg","img/Rujjanarot.jpg","img/Wanwisa.jpg","img/Siradanai.jpg","img/Achita.jpg","img/Supitcha.jpg","img/Wikorn.jpg"];
+
+        //obj name
+        let students = [
+         {
+        "name": "Jack",
+        "number": "020"
+          },
+          {
+        "name": "Tak",
+        "number": "021"
+          },
+          {
+        "name": "Floolyz",
+        "number": "022"
+          },
+          {
+        "name": "FrongCute",
+        "number": "023"
+          },
+          {
+        "name": "Boss",
+        "number": "024"
+          },
+          {
+        "name": "Ing",
+        "number": "025"
+          },
+          {
+        "name": "Tomo",
+        "number": "026"
+          },
+          {
+        "name": "Ant",
+        "number": "027"
+          },
+          {
+        "name": "Aum",
+        "number": "029"
+          },
+          {
+        "name": "Kla",
+        "number": "030"
+          },
+          {
+        "name": "Baimai",
+        "number": "031"
+          },
+          {
+        "name": "Nay",
+        "number": "033"
+          },
+          {
+        "name": "Aum",
+        "number": "034"
+          },
+          {
+        "name": "Ice",
+        "number": "035"
+          },
+          {
+        "name": "Frame",
+        "number": "036"
+          },
+          {
+        "name": "Timmy",
+        "number": "038"
+          },
+          {
+        "name": "Beam",
+        "number": "039"
+          },
+          {
+        "name": "ploy",
+        "number": "040"
+          },
+          {
+        "name": "Tar",
+        "number": "041"
+          },
+          {
+        "name": "Earth",
+        "number": "042"
+          },
+          {
+        "name": "mine",
+        "number": "072"
+          },
+          {
+        "name": "Nay",
+        "number": "075"
+          }
+          
+        ]; 
+        let i = 0; // Initialize index
+
+        // Function to change the image and name
+        function updateStudentInfo() {
+            document.querySelector('.img-student').src = img[i];
+            document.querySelector('.Name-student').innerHTML = students[i].name + " " + students[i].number;
+        }
+
+        // Initial update
+        updateStudentInfo();
+
+        function Next() {
+            i = (i + 1) % img.length;
+            updateStudentInfo();
+        }
+
+        function Prev() {
+            i = (i - 1 + img.length) % img.length;
+            updateStudentInfo();
+        }
+    </script>
+    
+</body>
+</html>
